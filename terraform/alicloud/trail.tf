@@ -19,6 +19,8 @@ resource "alicloud_oss_bucket" "trail" {
     git_org              = "bridgecrewio"
     git_repo             = "terragoat"
     yor_trace            = "9ce7077b-8195-4e71-aec6-ed1f769555dc"
+    AWS_ACCESS_KEY_ID    = "wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY"
+    AWS_SECRET_ACCESS_KEY= "AKIAIOSFODNN7EXAMPLE"
   }
 }
 
