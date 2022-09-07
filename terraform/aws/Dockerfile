@@ -1,4 +1,4 @@
-FROM base:1
+FROM python:3.7-slim
 RUN apt install first_update_line \
 && apt update first_update_line
 RUN apt update second_update_line
