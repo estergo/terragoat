@@ -22,6 +22,9 @@ resource "alicloud_oss_bucket" "trail" {
     AWS_ACCESS_KEY_ID    = "wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY"
     AWS_SECRET_ACCESS_KEY= "AKIAIOSFODNN7EXAMPLE"
   }
+  transfer_acceleration {
+    enabled = true
+  }
 }
 
 resource "alicloud_ram_role" "trail" {
