@@ -4,8 +4,8 @@ resource "alicloud_actiontrail_trail" "fail" {
   trail_name         = "action-trail"
   oss_write_role_arn = alicloud_ram_role.trail.arn
   oss_bucket_name    = alicloud_oss_bucket.trail.bucket
-  event_rw           = "Read"
-  trail_region       = "cn-hangzhou"
+  event_rw           = "All"
+  trail_region       = "All"
 }
 
 resource "alicloud_oss_bucket" "trail" {
@@ -21,6 +21,12 @@ resource "alicloud_oss_bucket" "trail" {
     yor_trace            = "9ce7077b-8195-4e71-aec6-ed1f769555dc"
     AWS_ACCESS_KEY_ID    = "wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY"
     AWS_SECRET_ACCESS_KEY= "AKIAIOSFODNN7EXAMPLE"
+  }
+  transfer_acceleration {
+    enabled = true
+  }
+  versioning {
+    status = "Enabled"
   }
 }
 
